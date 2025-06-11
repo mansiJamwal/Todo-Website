@@ -16,7 +16,7 @@ function DeleteAccount() {
 
         try {
             setError('');
-            const response = await fetch("http://localhost:3000/deleteaccount", {
+            const response = await fetch("https://todo-website-dm1i.onrender.com/deleteaccount", {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',

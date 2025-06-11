@@ -20,7 +20,7 @@ function Todo() {
         if (!title.trim()) return;
         
         try {
-            const response = await fetch("http://localhost:3000/todo", {
+            const response = await fetch("https://todo-website-dm1i.onrender.com/todo", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -40,7 +40,7 @@ function Todo() {
 
     useEffect(() => {
         const fetchTodos = async () => {
-            const responseTodos = await fetch("http://localhost:3000/todo", {
+            const responseTodos = await fetch("https://todo-website-dm1i.onrender.com/todo", {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -133,7 +133,7 @@ function Todo() {
 function TodoItem({ todo, todos, setTodos }) {
     async function deletetodo() {
         try {
-            const response = await fetch(`http://localhost:3000/todo/${todo._id}`, {
+            const response = await fetch(`https://todo-website-dm1i.onrender.com/todo/${todo._id}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -149,7 +149,7 @@ function TodoItem({ todo, todos, setTodos }) {
 
     async function markasDone() {
         try {
-            const response = await fetch(`http://localhost:3000/todo/${todo._id}`, {
+            const response = await fetch(`https://todo-website-dm1i.onrender.com/todo/${todo._id}`, {
                 method: 'PATCH',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`,

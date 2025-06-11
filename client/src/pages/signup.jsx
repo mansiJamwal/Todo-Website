@@ -17,7 +17,7 @@ function SignUp() {
     async function addUser() {
         try {
             setError('');
-            const response = await fetch("http://localhost:3000/signup", {
+            const response = await fetch("https://todo-website-dm1i.onrender.com/signup", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
